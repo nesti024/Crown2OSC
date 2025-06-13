@@ -43,6 +43,8 @@ node index.js
 
 Once the script is running, it will log in to the Neurosity device and start sending focus data via OSC to the specified address. You can monitor the output in your terminal.
 
+Address: /focus/probability
+
 ## License
 
 This project is licensed under the MIT License.

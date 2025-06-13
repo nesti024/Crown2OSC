@@ -43,13 +43,21 @@ const main = async () => {
   console.log("Logged in");
 
   neurosity.focus().subscribe((focus) => {
+
+
+  console.log("Focus data:", focus);
+
     // Send OSC message with focus probability
     udpPort.send({
       address: "/focus/probability",
       args: [
-        {
+{
           type: "f",
           value: focus.probability
+        },
+        {
+          type: "f",
+          value: focus.timestamp
         }
       ]
     });
