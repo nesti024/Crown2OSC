@@ -42,22 +42,22 @@ const main = async () => {
   });
   console.log("Logged in");
 
-  neurosity.focus().subscribe((focus) => {
+  neurosity.calm().subscribe((calm) => {
 
 
-  console.log("Focus data:", focus);
+  console.log("Calm data:", calm);
 
-    // Send OSC message with focus probability
+    // Send OSC message with calm probability
     udpPort.send({
       address: "/pairDistance",
       args: [
 {
           type: "f",
-          value: focus.probability
+          value: calm.probability
         },
         {
           type: "f",
-          value: focus.timestamp
+          value: calm.timestamp
         }
       ]
     });
