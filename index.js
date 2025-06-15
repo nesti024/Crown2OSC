@@ -27,7 +27,7 @@ const udpPort = new osc.UDPPort({
   localAddress: "127.0.0.1",
   localPort: 0, // Use any available port for sending
   remoteAddress: "127.0.0.1",
-  remotePort: 9000
+  remotePort: 6969
 });
 udpPort.open();
 
@@ -49,7 +49,7 @@ const main = async () => {
 
     // Send OSC message with focus probability
     udpPort.send({
-      address: "/focus/probability",
+      address: "/pairDistance",
       args: [
 {
           type: "f",
